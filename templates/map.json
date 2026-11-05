@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "root": {
+    "id": "root",
+    "type": "root",
+    "label": "<project name>",
+    "children": [
+      {
+        "id": "t-0001",
+        "type": "task",
+        "label": "Example: add login to the API",
+        "date": "YYYY-MM-DD",
+        "children": [
+          {
+            "id": "q-0001",
+            "type": "question",
+            "label": "Why store sessions in Redis instead of the database?",
+            "date": "YYYY-MM-DD",
+            "children": [
+              {
+                "id": "i-0001",
+                "type": "insight",
+                "label": "Session reads happen on every request; an in-memory store keeps them fast.",
+                "date": "YYYY-MM-DD",
+                "source": "Redis docs [A2]",
+                "children": [
+                  {
+                    "id": "d-0001",
+                    "type": "decision",
+                    "label": "Use Redis for sessions, expire after 24h.",
+                    "date": "YYYY-MM-DD",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
